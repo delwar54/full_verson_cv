@@ -1,0 +1,790 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4,p{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header > p {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.pro_single > ul {
+  margin-left: 82px;
+}
+.pro_single li {
+  display: inline-block;
+  font-size: 19px;
+  margin-right: 45px;
+  font-weight: bold;
+}
+
+.right_menu > h2 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  text-align: center;
+}
+.banner_content_area {
+}
+.banner_content {
+  background: #fff none repeat scroll 0 0;
+  overflow: hidden;
+  padding: 20px 0;
+}
+.banner_image {
+}
+.songel_exp {
+  height: 72px;
+}
+.songel_exp_1 > h2 {
+  background: #78c6ec none repeat scroll 0 0;
+  color: #fff;
+  float: left;
+  font-weight: bold;
+  line-height:40px;
+  padding: 10px 9px;
+  width: 100px;
+}
+.songel_exp_2 > h2 {
+  background: #677278 none repeat scroll 0 0;
+  color: #fff;
+  float: left;
+  font-weight: bold;
+  line-height: 40px;
+  padding: 10px 9px;
+  width: 100px;
+}
+.songel_exp_3 > h2 {
+  background: #AED151 none repeat scroll 0 0;
+  color: #fff;
+  float: left;
+  font-weight: bold;
+  line-height: 40px;
+  padding: 10px 9px;
+  width: 100px;
+}
+.songel_exp_4 > h2 {
+  background: #8F918E none repeat scroll 0 0;
+  color: #fff;
+  float: left;
+  font-weight: bold;
+  line-height: 40px;
+  padding: 10px 9px;
+  width: 100px;
+}
+
+.songel_exp_1 > p {
+ background-image: url("img/skills_one.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 25px 0;
+  position: relative;
+  
+  color: #fff;
+  float: left;
+  font-size: 16px;
+  margin-left:  12px;
+  padding:7px;
+  width: 341px;
+}
+.songel_exp_2 > p {
+ background-image: url("img/skill_tow.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 25px 0;
+  position: relative;
+  
+  color: #fff;
+  float: left;
+  font-size: 16px;
+  margin-left:  12px;
+  padding: 7px;
+  width: 53%;
+}
+.songel_exp_3 > p {
+  background-image: url("img/skills_three.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  float: left;
+  font-size: 16px;
+  margin-left:  12px;
+  padding: 7px 20px 7px 7px;
+  position: relative;
+  width: 47%;
+}
+.songel_exp_4 > p {
+ background-image: url("img/skills_four.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 25px 0;
+  position: relative;
+  color: #fff;
+  float: left;
+  font-size: 16px;
+  margin-left:  12px;
+  padding: 7px;
+  width: 61%;
+}
+.songel_exp > h4 {
+  color: #414143;line-height: 21px;
+  float: left;margin-top: 20px;
+  font-size: 18px;font-family: "Libre Baskerville",serif;
+  margin-left: 3%;font-weight:bold;
+}
+.form_header > img {
+  border: 6px solid #677278;
+  border-radius: 191px;
+  width: 70%;
+}
+.left_banner_content {
+  border-bottom: 1px solid #8f918e;
+  margin-bottom: 5%;
+  overflow: hidden;
+  padding: 0 0 20px;
+}
+.left_banner_content:last-child {
+  border-bottom:0;
+}
+.left_color {
+  background: #78c6ec none repeat scroll 0 0;
+  float: left;
+  height: 175px;
+  width: 57px;
+}
+.left_color_two {
+  background: #AED151 none repeat scroll 0 0;
+  float: left;
+  height: 145px;
+  width: 57px;
+}
+.left_color_three {
+  background: #677278 none repeat scroll 0 0;
+  float: left;
+  height: 100px;
+  width: 57px;
+}
+.col-md-7.skills_title > p {
+  float: left;
+  font-size: 18px;
+  margin-top: 12%;
+}
+.map > h2 {
+  font-size: 27px;
+  font-weight: bold;font-family: 'Libre Baskerville', serif;
+  margin-bottom: 7%;
+}
+
+.skill_area_1 {
+  height: 175px;
+}
+.skill_area_2 {
+  height: 145px;
+}
+.skill_area_3 {
+  height: 100px;
+}
+
+.right_text > h2 {
+  color: #78c6ec;
+  font-size: 21px;
+  line-height: 38px;
+}
+.right_text {
+  float: left;
+  margin-left: 20px;
+}
+.right_text > h3 {
+  color: #2c2c2e;
+  font-size: 18px;
+}
+
+
+.right_text_two > h2 {
+  color: #AED151;
+  font-size: 21px;
+  line-height: 38px;
+}
+.right_text_two {
+  float: left;
+  margin-left: 20px;
+}
+.right_text_two > h3 {
+  color: #2c2c2e;
+  font-size: 18px;
+}
+.right_text_three > h2 {
+  color: #677278;
+  font-size: 21px;
+  line-height: 38px;
+}
+.right_text_three {
+  float: left;
+  margin-left: 20px;
+}
+.right_text_three > h3 {
+  color: #2c2c2e;
+  font-size: 18px;
+}
+.single_area > p {
+  background: #464646 none repeat scroll 0 0;
+  color: #fff;
+  float: left;
+  margin-right: 10px;
+  width: 29%;
+}
+.map > img {
+  width: 100%;
+}
+.content > p {
+  color: #19191b;
+  font-size: 18px;
+  font-weight: 500;
+   margin-top: 14%;
+}
+
+.bottom_content {
+  margin-left: 65px !important;
+}
+.bottom_content li.big {
+  background-image: url("img/larg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  font-size: 14px;
+  margin-right: 30px;
+  padding: 69px 5px 27px;
+  position: relative;
+}
+.bottom_content li.big:last-child{  margin-right: 0%;}
+.bottom_content li.sm:last-child{  margin-right: 0%;}
+.bottom_content li.sm {
+  background-image: url("img/smail.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 50px;
+  margin-right: 26px;
+  padding: 38px 17px 20px;
+  position: relative;
+  vertical-align: top;
+}
+.fa {
+  color: #AEADB1;
+  font-size: 20px;
+  margin-right: 2px;
+}
+.jap {
+  color: #677278;
+  font-size: 20px;
+}
+.blue {
+  color: #78C6EC;
+  font-size: 20px;
+}
+.green {
+  color: #AED151;
+  font-size: 20px;
+}
+.single_area > p {
+  background: #464646 none repeat scroll 0 0;
+  border-radius: 10px;
+  color: #fff;
+  float: left;
+  height: 91px;
+  padding: 33px 0 0 10px;
+  width: 67%;
+}
+.single_area > img {
+  left: -28px;
+  position: absolute;
+  top: -23px;
+  width: 45%;
+}
+.single_area {
+  float: left;
+  height: auto;
+  position: relative;
+  width: 33%;
+}
+.banner_image > p {
+  color: #000000;
+  float: left;
+  font-size: 17px;
+  line-height: 25px;
+  margin-top: 10%;
+}
+.pro_single > img {
+  width: 100%;
+}
+.banner_image > h2 {
+  color: #3c3c3d;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 4%;font-family: 'Libre Baskerville', serif;
+  padding: 0 10px 10px;
+}
+.skills_title > h2 {
+  color: #3c3c3d;
+  font-size: 30px;font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+  margin-bottom: 7%;
+  padding: 0 0 17px;
+}
+.blue_color {
+  background: #0a5590 none repeat scroll 0 0;
+  padding: 10px;
+}
+.blue_color > h2 {
+  color: #fff;
+  font-weight: 700;
+  padding: 5px;
+  text-align: center;
+}
+.form_header {
+  margin-bottom: 22px;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+}
+.form_header > img {
+}
+.form_header > h2 {
+  color: #313132;
+  font-size: 40px;font-family: "Libre Baskerville",serif;
+  font-weight: 700;
+}
+.form_header > h3 {
+  color: #78c6ec;
+  font-size: 32px;
+  font-weight: bold;font-family: "Libre Baskerville",serif;
+  line-height: 71px;
+  margin-bottom: 12%;
+  text-align: center;
+}
+.shadow_bg {
+  margin-bottom: 18%;
+  margin-left: 11%;
+}
+.form_header > h3 span{
+  color: #AED151;
+}
+
+.shadow_bg li {
+  font-size: 18.5px;
+  margin-bottom: 20px;
+}
+.shadow_bg ul li i {
+  color: #677278;
+  font-size: 27px;
+  margin-right: 18px;
+}
+.mid_sidebar {
+  margin-top: 23%;
+}
+.shadow_bg > ul {
+  overflow: hidden;
+  padding: 20px 0;
+}
+.top_sidebar {
+	color:#414143;
+	
+}
+.bottom_sidebar {
+  margin-top: 23%;
+}
+.bottom_sidebar > p {
+  color: #333333;
+  font-size: 17px;
+  line-height: 23px;
+}
+.form_area {
+  padding: 0 20px;
+}
+.form_area input, select {
+  border: 2px solid #ebebeb;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding: 7px 10px;
+  width: 100%;
+}
+.form_area input[type="submit"] {
+  background: #fd9840 none repeat scroll 0 0;
+  border: medium none;
+  color: #414143;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+.form_area p {
+  font-size: 9px;
+  padding-bottom: 14px;
+}
+.form_area img {
+  margin-right: 5px;
+}
+
+
+.top_sidebar > h2 {
+  color: #414143;
+  font-size: 27px;font-family: "Libre Baskerville",serif;
+  font-weight: bold;
+  line-height: 60px;
+}
+.top_sidebar > p {
+  color: #414143;
+  font-size: 19px;
+}
+.mid_sidebar > h2 {
+  color: #414143;
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 60px;
+}
+.mid_sidebar > p {
+  color: #414143;
+  font-size: 19px;
+}
+.single_lang > h4 {
+  float: left;
+  width: 94px;
+}
+.single_lang > ul {
+  float: left;
+  width: 250px;
+}
+.single_lang li {
+  display: inline-block;
+}
+.single_lang {
+  border-bottom: 1px solid #677278;
+  height: 30px;
+  margin-bottom: 16px;
+  padding-bottom: 32px;
+}
+.mid_sidebar > h2 {
+  color: #414143;
+  font-size: 27px;
+  font-weight: bold;font-family: "Libre Baskerville",serif;
+  line-height: 60px;
+  margin-bottom: 4%;
+}
+.col-md-8.col-sm-8.col-xs-12.right_content_area {
+  border-left: 1px solid #8F918E;
+}
